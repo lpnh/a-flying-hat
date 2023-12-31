@@ -1,0 +1,13 @@
+[tasks.start-tailwind]
+command = "./tailwindcss"
+args = ["tailwindcss", "-i", "input.css", "-o", "./assets/output.css", "--watch"]
+
+[tasks.start-server]
+command = "cargo"
+args = ["watch", "-qcx", "run"]
+
+[tasks.start-dev]
+run_task = { name = ["start-tailwind", "start-server"], fork = true, parallel = true }
+
+[tasks.run-dev]
+run_task = { name = ["clean", "start-dev"], fork = false }

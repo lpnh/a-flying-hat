@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="/assets/htmx.min.js"></script>
+        <title>{% block title %}{{ title }} - My Site{% endblock %}</title>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="/assets/output.css">
+        <link rel="icon" sizes="192x192" href="/assets/android-chrome-192x192.png">
+        <link rel="icon" sizes="512x512" href="/assets/android-chrome-512x512.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+        <link rel="manifest" href="/assets/site.webmanifest">
+        {% block head %}{% endblock %}
+    </head>
+    <body
+        class="font-fira-mono flex flex-col items-center bg-stone-950 min-h-screen w-full text-base text-center text-gray-300">
+        <div id="content" class="flex flex-col w-full max-w-4xl mx-6 justify-center items-center">
+            {% block content %}{% endblock %}
+        </div>
+    </body>
+</html>
