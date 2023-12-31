@@ -1,8 +1,6 @@
 # a flying hat
 
-<div style="text-align: center;">
-    <img src="assets/propeller.svg" width="256" height="256">
-</div>
+<img src="assets/propeller.svg" width="256" height="256">
 
 A Web App template leveraging [axum](https://github.com/tokio-rs/axum), [Askama](https://github.com/djc/askama), [htmx](https://github.com/bigskysoftware/htmx) and [Tailwind](https://github.com/tailwindlabs/tailwindcss).
 Deployed with [Fly.io](fly.io).

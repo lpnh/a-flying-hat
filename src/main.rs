@@ -20,7 +20,7 @@ async fn main() {
         .route("/", get(index))
         .route("/clicked", post(click_response))
         .route("/ping", get(ping))
-        .nest_service("/assets", ServeDir::new("assets"));
+        .nest_service("/public", ServeDir::new("public"));
 
     if cfg!(debug_assertions) {
         info!("Enabling livereload");

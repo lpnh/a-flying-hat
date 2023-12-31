@@ -1,5 +1,7 @@
 # flyctl launch added from .gitignore
 target/
+assets/
+
 tailwindcss
 
 fly.toml
