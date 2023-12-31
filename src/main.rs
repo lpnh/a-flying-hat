@@ -6,7 +6,7 @@ use axum::{
 use tower_http::services::ServeDir;
 use tracing::info;
 
-use a_hat::templates::{click_response, index};
+use a_flying_hat::templates::{click_response, index};
 
 async fn ping() -> impl IntoResponse {
     Json("pong!")
@@ -27,7 +27,7 @@ async fn main() {
         app = app.layer(tower_livereload::LiveReloadLayer::new());
     }
 
-    let listener = tokio::net::TcpListener::bind("127.0.0.1:8000").await.unwrap();
+    let listener = tokio::net::TcpListener::bind("[::]:8080").await.unwrap();
 
     axum::serve(listener, app)
         .await

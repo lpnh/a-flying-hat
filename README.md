@@ -1,6 +1,11 @@
-# a-hat
+# a flying hat
 
-A Web App template leveraging [axum](https://github.com/tokio-rs/axum) + [askama](https://github.com/djc/askama) + [htmx](https://github.com/bigskysoftware/htmx) and [Tailwind](https://github.com/tailwindlabs/tailwindcss).
+<div style="text-align: center;">
+    <img src="assets/propeller.svg" width="256" height="256">
+</div>
+
+A Web App template leveraging [axum](https://github.com/tokio-rs/axum), [Askama](https://github.com/djc/askama), [htmx](https://github.com/bigskysoftware/htmx) and [Tailwind](https://github.com/tailwindlabs/tailwindcss).
+Deployed with [Fly.io](fly.io).
 
 ## Setup
 
@@ -31,3 +36,11 @@ Or simply run:
 ```no_rust
 curl -L https://unpkg.com/htmx.org/dist/htmx.min.js -o htmx.min.js
 ```
+
+### Fly.io
+
+For a good overview you can check the [Speedrun](https://fly.io/docs/speedrun/) section of the official documentation.
+
+### Dockerfile
+
+Here's a repository with a very good example how configure the Dockerfile: [letsgetrusty](https://github.com/letsgetrusty/api-deployment-example)
