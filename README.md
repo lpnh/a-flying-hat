@@ -1,4 +1,4 @@
-# a flying hat
+# 🦀 a flying hat
 
 <img src="assets/propeller.svg" width="256" height="256">
 
