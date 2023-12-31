@@ -41,4 +41,4 @@ For a good overview you can check the [Speedrun](https://fly.io/docs/speedrun/) 
 
 ### Dockerfile
 
-Here's a repository with a very good example how configure the Dockerfile: [letsgetrusty](https://github.com/letsgetrusty/api-deployment-example)
+Here's a repository with a very good example how to configure the Dockerfile: [letsgetrusty](https://github.com/letsgetrusty/api-deployment-example)
