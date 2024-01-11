@@ -15,7 +15,7 @@ run_task = { name = ["clean-public", "create-public-dir", "add-public-files"], f
 
 [tasks.clean-css]
 command = "sh"
-args = ["-c", "rm public/output.css"]
+args = ["-c", "rm -f public/output.css"]
 
 [tasks.start-tailwind]
 command = "./tailwindcss"

@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}Home{% endblock %}
+{% block title %}{{ page_title }}{% endblock %}
 
 {% block head %}
     <style>
@@ -18,13 +18,25 @@
 {% endblock %}
 
 {% block content %}
-    <div class="tracking-widest mt-4 flex sm:text-lg text-amber-200 justify-center items-center inset-x-0 top-0 bottom-auto">Hello, friend!</div>
+    <div class="tracking-widest mt-4 flex sm:text-lg text-amber-200 justify-center items-center inset-x-0 top-0 bottom-auto">{{ greetings }}</div>
     <div class="pb-20 flex flex-1 items-center mx-4">
         <div id="magic" class="mx-auto max-w-3xl text-center md:space-y-20 space-y-14">
             <div>
-                <h1 class="pb-6 md:text-2xl text-lg text-rose-400 font-bold">{{ home_h1 }}</h1>
+                <h1 class="pb-6 md:text-2xl text-lg text-rose-400 font-bold">a flying hat<h1>
+                <p class="m-auto w-4/6 md:text-xl">
+                    My personal Web App template leveraging
+                    <a class="text-rose-300 hover:text-rose-200 active:text-rose-200 transition duration-200"
+                        href="https://github.com/tokio-rs/axum" target="_blank">axum</a>, 
+                    <a class="text-rose-300 hover:text-rose-200 active:text-rose-200 transition duration-200"
+                        href="https://github.com/djc/askama" target="_blank">Askama</a>, 
+                    <a class="text-rose-300 hover:text-rose-200 active:text-rose-200 transition duration-200"
+                        href="https://github.com/bigskysoftware/htmx" target="_blank">htmx</a>
+                    and 
+                    <a class="text-rose-300 hover:text-rose-200 active:text-rose-200 transition duration-200"
+                        href="https://github.com/tailwindlabs/tailwindcss" target="_blank">Tailwind</a>.
+                </p>
                 <p class="m-auto w-3/4 md:text-xl">
-                    My Web App template leveraging axum, Askama, htmx and Tailwind. Deployed with
+                    Deployed with
                     <a class="text-rose-300 hover:text-rose-200 active:text-rose-200 transition duration-200"
                         href="https://fly.io/" target="_blank">Fly.io</a>
                 </p>
