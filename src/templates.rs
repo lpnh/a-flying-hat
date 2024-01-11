@@ -5,12 +5,12 @@ use axum::response::IntoResponse; // bring trait in scope
 #[template(path = "index.html")] // using the template in this path, relative to the `templates` dir in the crate root
 pub struct IndexTemplate<'a> {
     home_h1: &'a str, // the field name should match the variable name
-                        // in your template
+                      // in your template
 }
 
 pub async fn index() -> impl IntoResponse {
     // instantiate your struct
-    IndexTemplate { 
+    IndexTemplate {
         home_h1: "a flying hat",
     }
 }

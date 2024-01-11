@@ -2,7 +2,7 @@
 command = "sh"
 args = ["-c", "rm -rf public"]
 
-[tasks.new-public]
+[tasks.create-public-dir]
 command = "sh"
 args = ["-c", "mkdir public"]
 
@@ -10,8 +10,12 @@ args = ["-c", "mkdir public"]
 command = "sh"
 args = ["-c", "cp -r assets/* public/"]
 
-[tasks.create-public]
-run_task = { name = ["clean-public", "new-public", "add-public-files"], fork = false }
+[tasks.build-public]
+run_task = { name = ["clean-public", "create-public-dir", "add-public-files"], fork = false }
+
+[tasks.clean-css]
+command = "sh"
+args = ["-c", "rm public/output.css"]
 
 [tasks.start-tailwind]
 command = "./tailwindcss"
@@ -29,7 +33,7 @@ args = ["watch", "-qcx", "run"]
 run_task = { name = ["start-tailwind", "start-server"], fork = true, parallel = true }
 
 [tasks.run-dev]
-run_task = { name = ["clean", "create-public", "start-dev"], fork = false }
+run_task = { name = ["format", "clean", "clean-css", "start-dev"], fork = false }
 
 [tasks.run-release]
-run_task = { name = ["clean", "create-public", "release-tailwind"], fork = false }
+run_task = { name = ["format", "clean", "clean-css", "release-tailwind"], fork = false }

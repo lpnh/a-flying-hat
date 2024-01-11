@@ -1,4 +1,4 @@
-# 🦀 a flying hat
+# a flying hat
 
 <img src="assets/propeller.svg" width="256" height="256">
 
@@ -12,6 +12,7 @@ Deployed with [Fly.io](fly.io).
 Get the [latest release](https://github.com/tailwindlabs/tailwindcss/releases/latest) and give it executable permissions:
 
 ```no_rust
+# Example for linux
 curl -LO https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-linux-x64
 chmod +x tailwindcss-linux-x64
 mv tailwindcss-linux-x64 tailwindcss
@@ -42,3 +43,41 @@ For a good overview you can check the [Speedrun](https://fly.io/docs/speedrun/) 
 ### Dockerfile
 
 Here's a repository with a very good example how to configure the Dockerfile: [letsgetrusty](https://github.com/letsgetrusty/api-deployment-example)
+
+### cargo-watch
+
+Make sure you have `cargo-watch` [installed](https://github.com/watchexec/cargo-watch#install):
+
+```no_rust
+# For Arch Linux
+sudo pacman -S cargo-watch
+```
+
+### cargo-make
+
+Make sure you have `cargo-make` [installed](https://github.com/sagiegurari/cargo-make#installation):
+
+```no_rust
+# For Arch Linux
+sudo pacman -S cargo-make
+```
+
+## Available tasks:
+
+**Remove old public directory if any, create a new one, populate it with assets files:**
+
+```no_rust
+cargo make build-public
+```
+
+**Clean, Format and Run project with cargo watch:**
+
+```no_rust
+cargo make run-dev
+```
+
+**Clean, Format and Build project for release:**
+
+```no_rust
+cargo make run-release
+```
